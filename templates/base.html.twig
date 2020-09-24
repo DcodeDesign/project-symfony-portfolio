@@ -2,11 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="images/logo.png" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <nav id="navigation" class="navigation">
+            <ul>
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+                <li>Menu</li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="assets/js/main.js"></script>
+        {% endblock %}
     </body>
 </html>
