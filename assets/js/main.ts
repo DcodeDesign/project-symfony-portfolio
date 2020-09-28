@@ -1,25 +1,18 @@
-//import * as $ from 'jquery';
+/**
+ * app.scss
+ */
 import '../css/app.scss';
 
-console.log('Hello Webpack Encore! 2');
+/**
+ * @import ProgressBarPageHorizontal
+ */
+import { ProgressBarPageHorizontal } from "./import/ProgressBarPageHorizontal";
+let progressBarPageHorizontal = new ProgressBarPageHorizontal();
+progressBarPageHorizontal.animate();
 
-window.onscroll = function () {
-    let itemTimeLine = document.getElementById("time-line");
-    let itemMyBar = document.getElementById("myBar");
-    let itemNavigation =  document.getElementById("navigation");
-    let scrollHeight = window.innerHeight
-    let scrollVertical: number = window.pageYOffset ;
-    let bodyHeight : number = document.body.clientHeight;
-    let scrollWidth = ((scrollVertical / (bodyHeight - scrollHeight))*100);
-    itemTimeLine.style.height = scrollWidth + "%";
-    itemMyBar.style.width = scrollWidth + "%";
-    console.log(scrollVertical)
-    if(scrollVertical <= 50) {
-        console.log(scrollVertical);
-        itemNavigation.style.position = "fixed";
-    }
-
-};
-
-
-
+/**
+ * @import PageLoader
+ */
+import { PageLoader } from "./import/PageLoader";
+let pageLoader = new PageLoader;
+pageLoader.loader();

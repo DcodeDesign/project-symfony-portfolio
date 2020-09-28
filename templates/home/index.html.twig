@@ -3,6 +3,14 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-   <div class="progress-bar" id="myBar"></div>
-   <div id="time-line"></div>
+    <div id="container-page" class="container-page">
+        {% include 'inc/navigation.html.twig' %}
+    </div>
+    {% include 'inc/loader.html.twig' %}
+    {% include 'inc/progressBar.html.twig' %}
+    <div class="wrap">
+        <div class="bg"></div>
+    </div>
+
+
 {% endblock %}

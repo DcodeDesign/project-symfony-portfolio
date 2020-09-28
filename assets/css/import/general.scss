@@ -1,0 +1,24 @@
+body {
+  padding:0;
+  margin:0;
+  width:100%;
+  height: 3000px;
+}
+
+.show, hidden {
+  transition: all 1s ease-in-out;
+}
+
+.hidden, .container-page {
+  opacity:0;
+}
+
+.show {
+  opacity:1;
+}
+
+.moveEffect {
+  height:150px;
+  width:150px;
+  background-color:gray;
+}

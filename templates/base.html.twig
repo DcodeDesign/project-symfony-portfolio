@@ -4,20 +4,17 @@
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="images/logo.png" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Nova+Flat&display=swap" rel="stylesheet">
+
         {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        <nav id="navigation" class="navigation">
-            <ul>
-                <li>Menu</li>
-                <li>Menu</li>
-                <li>Menu</li>
-                <li>Menu</li>
-            </ul>
-        </nav>
-        {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="assets/js/main.js"></script>
         {% endblock %}
+    </head>
+    <body>
+
+
+
+        {% block body %}{% endblock %}
     </body>
 </html>
