@@ -16,3 +16,15 @@
   -moz-box-shadow: inset -2px 17px 80px -19px rgba(0,0,0,0.90);
   box-shadow: inset -2px 17px 80px -19px rgba(0,0,0,0.90);
 }
+
+@mixin shadow_strong-bottom {
+  -webkit-box-shadow: inset 0px -100px 40px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: inset 0px -100px 40px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0px -100px 40px 0px rgba(0, 0, 0, 0.8);
+}
+
+@mixin shadow_strong-top {
+  -webkit-box-shadow: inset 0px 100px 40px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: inset 0px 100px 40px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0px 100px 40px 0px rgba(0, 0, 0, 0.8);
+}

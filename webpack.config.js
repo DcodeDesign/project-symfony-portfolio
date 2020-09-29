@@ -1,7 +1,7 @@
 const path = require('path');
 
 let buildTypescript = {
-    entry: ['./assets/js/main.ts','./assets/js/portfolio.ts' ],
+    entry: ['./assets/js/main.ts'],
     module: {
         rules: [
             {
