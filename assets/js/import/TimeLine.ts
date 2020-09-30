@@ -17,7 +17,6 @@ export class TimeLine {
 
     private elemInScreen (el: any) : boolean  {
         let rect : any = el.getBoundingClientRect();
-        console.log( rect.top,rect.left, rect.bottom , rect.right)
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&

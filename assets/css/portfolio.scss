@@ -89,12 +89,13 @@ body {
 }
 
 .space-ship {
-  width: 30px;
-  height: 30px;
-  background-color: red;
+  background-image:url("../images/sprite-spaceship2.png");
+  background-size: cover;
+  width: 150px;
+  height: 132px;
   position: fixed;
-  top: 90%;
+  top: 84%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index:99;
+  transform: translate(-50%, -50%) rotate(180deg);
+  z-index: 99;
 }
