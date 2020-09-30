@@ -27,4 +27,11 @@ new BackgroundAnimate(".timeline");
 import { Parallax } from "./import/Parallax";
 new Parallax("parallax");
 
+/**
+ * @import Navigation
+ */
+import { Navigation } from "./import/Navigation";
+new Navigation();
+
+
 

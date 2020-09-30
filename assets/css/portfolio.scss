@@ -2,6 +2,7 @@
 @import 'portfolio/mixin.scss';
 @import 'import/loader.scss';
 @import 'portfolio/timeline.scss';
+@import 'portfolio/navigation.scss';
 
 body {
   margin:0;
@@ -89,7 +90,7 @@ body {
 }
 
 .space-ship {
-  background-image:url("../images/sprite-spaceship2.png");
+
   background-size: cover;
   width: 150px;
   height: 132px;
