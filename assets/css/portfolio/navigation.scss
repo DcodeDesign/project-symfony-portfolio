@@ -1,0 +1,71 @@
+.burger {
+  transition:all 0.8s;
+  position:absolute;
+  right:40px;
+  top:40px;
+  z-index:99999;
+  overflow: auto;
+  transform-style: preserve-3d;
+  transform-origin: top right;
+}
+
+.burger .bar-top, .burger .bar-middle, .burger .bar-bottom {
+  transform-origin: top right;
+  transition: all .4s  ease-in-out;
+  background-color: white;
+  height: 4px;
+  width: 22px;
+  border-radius: 5px;
+  margin:4px 0;
+}
+
+.burger .bar-middle{
+  transition: all .8s  ease-in-out;
+  background-color: white;
+  height: 4px;
+  width: 15px;
+  border-radius: 5px;
+  margin:4px 0;
+}
+
+.burger .bar-bottom{
+  transition: all 1.2s ease-in-out;
+  background-color: white;
+  height: 4px;
+  width: 30px;
+  border-radius: 5px;
+  margin:4px 0;
+}
+
+.close {
+  opacity:0;
+
+}
+
+
+.burger.show {
+  position: fixed;
+  right:0px;
+  top:0px;
+  z-index:99999;
+  overflow: auto;
+  height:100vh;
+  width:100%;
+  transform-style: preserve-3d;
+  transform-origin: top right;
+}
+
+.burger .bar-top.show, .burger .bar-middle.show, .burger .bar-bottom.show {
+  background-color: black;
+  height: calc(100% / 3);
+  width: 100%;
+  border-radius: 0;
+  margin:0;
+  animation: bgColor 1s ease;
+}
+
+@keyframes bgColor {
+  0% {background:white;opacity:0;}
+  60% {background:white;opacity:.6;}
+  100% {background:black;opacity:1;}
+}

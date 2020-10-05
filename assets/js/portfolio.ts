@@ -28,4 +28,11 @@ import { Parallax } from "./import/Parallax";
 new Parallax("parallax");
 new Parallax("parallax2");
 
+/**
+ * @import Navigation
+ */
+import { Navigation } from "./import/Navigation";
+new Navigation();
+
+
 
