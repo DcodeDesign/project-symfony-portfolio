@@ -8,13 +8,9 @@
 }
 
 @mixin header__content {
-  -webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.75);
-  box-shadow: 0 0 15px 2px rgba(0,0,0,0.75);
-
-  -webkit-box-shadow: inset -2px 17px 80px -19px rgba(0,0,0,0.90);
-  -moz-box-shadow: inset -2px 17px 80px -19px rgba(0,0,0,0.90);
-  box-shadow: inset -2px 17px 80px -19px rgba(0,0,0,0.90);
+  -webkit-box-shadow: inset 0px 62px 45px 40px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 62px 45px 40px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 62px 45px 40px rgba(0,0,0,0.75);
 }
 
 @mixin shadow_strong-bottom {
