@@ -17,13 +17,16 @@ let buildTypescript = {
                     // Translates CSS into CommonJS
                     'css-loader',
                     // Compiles Sass to CSS
-                    'sass-loader',
+                    'sass-loader'
                 ],
-            },
+            },{
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                loader: "file-loader"
+            }
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: [ '.tsx', '.ts', '.js', 'woff' ],
     },
     output: {
         filename: '[name]'.js,
@@ -59,6 +62,10 @@ let buildPortfolio = {
                     publicPath: 'assets/',
                 },
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                loader: "file-loader"
+            }
         ]
     },
     resolve: {
