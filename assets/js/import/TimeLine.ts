@@ -5,18 +5,17 @@ export class TimeLine {
     constructor(elem : string) {
         this._elem = elem;
         window.addEventListener("load", (e: Event) => {
-            this.elemVisible()
-        });
-        window.addEventListener("resize", (e: Event) => {
-            this.elemVisible()
-        });
-        window.addEventListener("scroll", (e: Event) => {
-            this.elemVisible()
+            let items: any = document.querySelectorAll(this._elem);
+            window.addEventListener("resize", (e: Event) => {
+                this.elemVisible(items);
+            });
+            window.addEventListener("scroll", (e: Event) => {
+                this.elemVisible(items);
+            });
         });
     }
 
-    private elemInScreen (el: any) : boolean  {
-        let rect : any = el.getBoundingClientRect();
+    private elemInScreen (rect: any) : boolean  {
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
@@ -25,10 +24,11 @@ export class TimeLine {
         );
     }
 
-    public elemVisible() : void {
-        let items : any = document.querySelectorAll(this._elem);
-        for (let i : number = 0; i < items.length; i++) {
-            if (this.elemInScreen (items[i])) {
+    public elemVisible(items : any) : void {
+        for (let i: number = 0; i < items.length; i++) {
+            let rect : any = items[i].getBoundingClientRect();
+            if (this.elemInScreen(rect)) {
+                console.log(i + " element")
                 items[i].classList.add("in-view");
             }
         }

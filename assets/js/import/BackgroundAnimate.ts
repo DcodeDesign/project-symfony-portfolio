@@ -13,7 +13,7 @@ export class BackgroundAnimate {
     }
 
     public animation (): void {
-        let velocity = 0.5;
+        let velocity = 3.5;
         let pos = $(window).scrollTop();
         $(this._elem).each(function() {
             let $element = $(this);

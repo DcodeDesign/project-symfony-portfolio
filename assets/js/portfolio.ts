@@ -9,30 +9,41 @@ import '../css/portfolio.scss';
 import { PageLoader } from "./import/PageLoader";
 new PageLoader();
 
+
 /**
  * @import TimeLine
  */
 import { TimeLine } from "./import/TimeLine";
-new TimeLine(".timeline li");
+new TimeLine(".timeline ul li");
+
 
 /**
  * @import BackgroundAnimate
  */
 import { BackgroundAnimate } from "./import/BackgroundAnimate";
-new BackgroundAnimate(".timeline");
+new BackgroundAnimate(".bg");
+
 
 /**
- * @import BackgroundAnimate
+ * @import Parallax
  */
 import { Parallax } from "./import/Parallax";
-new Parallax("parallax");
-new Parallax("parallax2");
+new Parallax("parallax_header");
+new Parallax("parallax_intro");
 
 /**
  * @import Navigation
  */
 import { Navigation } from "./import/Navigation";
 new Navigation();
+
+
+/**
+ * @import Carousel
+
+ import { Carousel } from "./import/Carousel";
+ new Carousel;
+ */
 
 
 

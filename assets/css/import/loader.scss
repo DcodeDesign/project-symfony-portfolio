@@ -14,10 +14,14 @@
 
 .hidden, .container-page {
   opacity:0;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .show {
   opacity:1;
+  overflow: initial;
+  height: initial;
 }
 
 svg.tea {

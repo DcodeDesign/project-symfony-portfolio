@@ -27,7 +27,7 @@ let buildTypescript = {
     },
     output: {
         filename: '[name]'.js,
-        path: path.resolve(__dirname, 'public/assets/js'),
+        path: path.resolve(__dirname, 'public/assets/'),
     }
 };
 
@@ -56,7 +56,7 @@ let buildPortfolio = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    publicPath: 'assets/js',
+                    publicPath: 'assets/',
                 },
             },
         ]
@@ -66,7 +66,7 @@ let buildPortfolio = {
     },
     output: {
         filename: 'portfolio.js',
-        path: path.resolve(__dirname, 'public/assets/js'),
+        path: path.resolve(__dirname, 'public/assets/'),
     }
 };
 

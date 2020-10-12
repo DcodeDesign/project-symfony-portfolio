@@ -1,0 +1,17 @@
+#carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  div {
+    margin: -2px;
+    padding: 3px;
+    -webkit-padding-start: 0;
+    list-style-type: none;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background-color:white;
+  }
+}

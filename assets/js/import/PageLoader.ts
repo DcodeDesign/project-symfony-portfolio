@@ -1,8 +1,10 @@
 export class PageLoader{
 
     constructor() {
-        window.addEventListener("load", (e: Event) => {
-            this.loader();
+        window.addEventListener("DOMContentLoaded", (e: Event) => {
+            window.addEventListener("load", (e: Event) => {
+                this.loader();
+            });
         });
     }
 

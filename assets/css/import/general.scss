@@ -1,4 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
+  scroll-behavior: smooth;
   padding:0;
   margin:0;
   width:100%;
@@ -11,10 +15,12 @@ body {
 
 .hidden, .container-page {
   opacity:0;
+  height: 100vh;
 }
 
 .show {
   opacity:1;
+  height: initial;
 }
 
 .moveEffect {

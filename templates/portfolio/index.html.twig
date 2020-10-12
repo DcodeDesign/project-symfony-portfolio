@@ -7,23 +7,23 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/portfolio.js"></script>
 {% endblock %}
 
 {% block body %}
-    {% include 'partials/loader.html.twig' %}
-
+    {% include './partials/loader.html.twig' %}
     <div id="container-page" class="container-page">
-        <header>
-            <nav>
-                {% include 'partials/burger.html.twig' %}
-            </nav>
-            <div class="header__container">
-                <div id="parallax" class="header__content">
-                </div>
-            </div>
-
-
-        </header>
+        {% include 'portfolio/partials/sections/header.html.twig' %}
+        {% include 'portfolio/partials/sections/intro.html.twig' %}
+        {% include 'portfolio/partials/sections/parcours.html.twig' %}
+    </div>
+    <div style="display:none;">
+       <!-- <audio id="song" controls preload="auto" loop autoplay>
+            Your browser does not support the
+            <source src="song/HaTom-Naya.ogg" type="audio/ogg">
+        </audio>
+        <script>
+            var x = document.getElementById("song").autoplay;
+        </script> -->
     </div>
 {% endblock %}

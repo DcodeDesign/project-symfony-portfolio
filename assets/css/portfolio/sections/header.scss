@@ -1,0 +1,16 @@
+.header__container {
+  z-index:999;
+  height: 100%;
+  position:relative;
+  .header__content {
+    //transition:background-position 1ms ease-out;
+    position: absolute;
+    top:0;
+    background-image:url("../images/header/header_plan_3.png"), url("../images/header/header_plan_2.png"), url("../images/header/header_plan_1.png"), url("../images/header/header_plan_0.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size:110%;
+    background-position:center center;
+    width: 100%;
+    height: 100%;
+  }
+}
