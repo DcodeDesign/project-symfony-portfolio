@@ -208,11 +208,11 @@ body {
     transform: rotate(0deg);
   }
   to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -236,56 +236,53 @@ th, td {
   height:40px;
 }
 
-.rectangle_1 {
+.rectangle_1, .rectangle_2, .rectangle_3,.rectangle_4 {
   transform: perspective(500px) rotateX(90deg);
   width:50px;
   height:50px;
+  display:inline-block;
+}
+.no-animation{
+  animation-duration: initial ;
+  animation-delay: initial;
+  animation-name:none;
+  transform-origin: initial;
+}
+
+.rectangle_1 {
   background-color:red;
   //animation-iteration-count:infinite;
   animation-duration: 1.5s ;
   animation-delay: 0s;
   animation-name:perpective;
   transform-origin: top left;
-  display:inline-block;
 }
 
 .rectangle_2 {
-  transform: perspective(500px) rotateX(90deg);
-  width:50px;
-  height:50px;
   background-color:red;
   //animation-iteration-count:infinite;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
   animation-name:perpective_2;
   transform-origin: top left;
-  display:inline-block;
 }
 
 .rectangle_3 {
-  transform: perspective(500px) rotateX(90deg);
-  width:50px;
-  height:50px;
   background-color:red;
   //animation-iteration-count:infinite;
   animation-duration: 1.5s;
   animation-delay: 3s;
   animation-name:perpective_3;
   float:left;
-  display:inline-block;
 }
 
 .rectangle_4 {
-  transform: perspective(500px) rotateX(90deg);
-  width:50px;
-  height:50px;
   //animation-iteration-count:infinite;
   background-color:red;
   animation-duration: 1.5s;
   animation-delay: 4.5s;
   animation-name:perpective_4;
   float:left;
-  display:inline-block;
 }
 
 @keyframes perpective {
