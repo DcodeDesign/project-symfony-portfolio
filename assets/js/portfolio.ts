@@ -14,7 +14,7 @@ new PageLoader();
  * @import TimeLine
  */
 import { TimeLine } from "./import/TimeLine";
-new TimeLine(".timeline ul li");
+//new TimeLine(".timeline ul li");
 
 
 /**
@@ -29,7 +29,7 @@ new BackgroundAnimate(".bg");
  */
 import { Parallax } from "./import/Parallax";
 new Parallax("parallax_header");
-new Parallax("parallax_intro");
+
 
 /**
  * @import Navigation
