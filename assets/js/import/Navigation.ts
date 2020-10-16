@@ -1,6 +1,6 @@
 export class Navigation {
     constructor() {
-        window.addEventListener("load", (e: Event) => {
+        window.addEventListener("load", () => {
             this.show();
         })
     }
@@ -8,7 +8,7 @@ export class Navigation {
     public show ()  {
         let items = document.getElementsByClassName("burger");
         for (let i = 0; i < items.length; i++ ){
-            items[i].addEventListener("click", (e: Event) => {
+            items[i].addEventListener("click", () => {
                     let burger = items[i]
                     let barTop = items[i].getElementsByClassName("bar-top")[0];
                     let barMiddle = items[i].getElementsByClassName("bar-middle")[0];
@@ -24,7 +24,7 @@ export class Navigation {
     public hidden () : void {
         let items = document.getElementsByClassName("burger");
         for (let i = 0; i < items.length; i++ ){
-            items[i].addEventListener("click", (e: Event) => {
+            items[i].addEventListener("click", () => {
                 let burger = items[i]
                 let barTop = items[i].getElementsByClassName("bar-top")[0];
                 let barMiddle = items[i].getElementsByClassName("bar-middle")[0];

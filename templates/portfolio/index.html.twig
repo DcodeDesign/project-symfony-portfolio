@@ -3,25 +3,15 @@
 {% block title %}Hello, It's me!{% endblock %}
 
 {% block font %}
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Nova+Flat&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block javascripts %}
-    <script src="assets/portfolio.js"></script>
+    <!-- <script src="assets/portfolio.js"></script> -->
 {% endblock %}
 
 {% block body %}
-    {% include './partials/loader.html.twig' %}
+
     <div id="container-page" class="container-page">
-        {% include 'portfolio/partials/sections/header.html.twig' %}
-    </div>
-    <div style="display:none;">
-       <!-- <audio id="song" controls preload="auto" loop autoplay>
-            Your browser does not support the
-            <source src="song/HaTom-Naya.ogg" type="audio/ogg">
-        </audio>
-        <script>
-            var x = document.getElementById("song").autoplay;
-        </script> -->
+        {% include 'portfolio/partials/sections/scrollPageEffect.html.twig' %}
     </div>
 {% endblock %}

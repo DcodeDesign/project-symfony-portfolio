@@ -1,48 +1,46 @@
 .timeline{
   background-attachment: fixed;
   background-size: cover;
-  padding:50px 0;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top:45%;
 
-  li > div > img {
-    width:100%;
+  li {
+    text-align: center;
+    padding:100px 0;
   }
 
-  li:nth-child(1) > div > img {
-    max-width: 650px;
-    padding-top: 80px;
-    padding-bottom: 20px;
+  /*
+  * IMAGES
+  */
+
+  li> div > img {
+    width:40vw;
+
   }
 
-  li:nth-child(2) > div > img {
-    max-width:700px;
-    padding-top: 20px;
-    padding-bottom: 50px;
+  li:nth-child(1)> div > img {
+    max-width:600px;
   }
 
-  li:nth-child(3) > div > img {
-    max-width: 650px;
-    padding-top: 80px;
-    padding-bottom: 20px;
+  li:nth-child(2)> div > img {
+    max-width: 740px;
   }
 
-  li:nth-child(4) > div > img {
-    max-width:700px;
-    padding-top: 20px;
-    padding-bottom: 50px;
+  li:nth-child(3)> div > img {
+    max-width: 530px;
+    margin-left: -160px;
   }
 
-  li:nth-child(5) > div > img {
-    max-width: 650px;
-    padding-top: 80px;
-    padding-bottom: 20px;
+  li:nth-child(4)> div > img {
+    max-width: 500px;
+    margin-right:-30px;
   }
 
-  li:nth-child(6) > div > img {
-    max-width:700px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
+
+  /*
+  * TEXTES
+  */
 
   .text {
     color: white;
@@ -50,11 +48,25 @@
     color: #fff;
     top: 50%;
     left: 50%;
+    max-width: 300px;
+    width:100%;
+
+    @media screen and (max-width: 950px) {
+      max-width: 250px;
+    }
 
     h1, h2, h3{
-      font-size: 50px;
+      font-size: 70px;
       margin: 0;
       padding: 0;
+    }
+
+    @media screen and (max-width: 950px) {
+      h1, h2, h3{
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+      }
     }
 
     h2{
@@ -69,46 +81,31 @@
 
   li:nth-child(1) > div {
     .text {
-      transform: translate(0%, -90%);
+      transform: translate(0%, -146%);
       text-align: left;
     }
   }
 
   li:nth-child(2) > div {
     .text {
-      transform: translate(-80%, -101%);
+      transform: translate(-120%, -122%);
       text-align: right;
     }
   }
 
   li:nth-child(3) > div {
     .text {
-      transform: translate(0%, -90%);
+      transform: translate(24%, -50%);
       text-align: left;
     }
   }
 
   li:nth-child(4) > div {
     .text {
-      transform: translate(-80%, -101%);
+      transform: translate(-100%, -111%);
       text-align: right;
     }
   }
-
-  li:nth-child(5) > div {
-    .text {
-      transform: translate(0%, -90%);
-      text-align: left;
-    }
-  }
-
-  li:nth-child(6) > div {
-    .text {
-      transform: translate(-80%, -101%);
-      text-align: right;
-    }
-  }
-
 }
 
 .timeline ul {
@@ -124,7 +121,7 @@
 .timeline ul li div {
   visibility: hidden;
   opacity: 0;
-  transition: all 1.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
   box-sizing: border-box;
   width:100%;
   text-align: center;

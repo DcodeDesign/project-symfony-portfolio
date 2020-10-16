@@ -28,7 +28,6 @@ export class TimeLine {
         for (let i: number = 0; i < items.length; i++) {
             let rect : any = items[i].getBoundingClientRect();
             if (this.elemInScreen(rect)) {
-                console.log(i + " element")
                 items[i].classList.add("in-view");
             }
         }

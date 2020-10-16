@@ -8,10 +8,8 @@ export class Parallax {
             elem = document.getElementById(this._elem);
             let _w = window.innerWidth/2;
             let _h = window.innerHeight/2;
-
             // @ts-ignore
             window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
             window.requestAnimationFrame(() => {
             window.addEventListener("mousemove", (e: Event) => {
                     this.animation(e, elem, _w, _h);

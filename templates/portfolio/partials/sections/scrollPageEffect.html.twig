@@ -1,0 +1,56 @@
+<ul id="scrollPageEffect">
+    <li class="page bg-red active"></li>
+    <li class="page bg-green"></li>
+    <li class="page bg-yellow"></li>
+    <li class="page bg-blue"></li>
+</ul>
+<style>
+    html, body, #scrollPageEffect {
+        margin:0;
+        padding:0;
+    }
+
+    #scrollPageEffect {
+        list-style-type: none;
+    }
+
+    .page {
+        width:100%;
+        height:100vh;
+    }
+
+    .bg-red {
+        background-color:red;
+    }
+
+    .bg-green {
+        background-color:green;
+    }
+
+    .bg-yellow {
+        background-color:yellow;
+    }
+
+    .bg-blue {
+        background-color:blue;
+    }
+</style>
+<script>
+    var elem = document.getElementById("scrollPageEffect");
+    var pageItems = elem.getElementsByClassName("page");
+    var k = 0;
+    window.addEventListener("scroll", (e) => {
+        e.stopPropagation();
+        setTimeout(() => {
+            for(var i = 0; i < pageItems.length; i++ ){
+                var itemActive = (this.className = "active");
+                k = i + 1;
+                if(itemActive) {
+                    pageItems[i].classList.remove("active")
+                    pageItems[i + 1].classList.add("active");
+                }
+            }
+        }, 2000)
+    })
+
+</script>

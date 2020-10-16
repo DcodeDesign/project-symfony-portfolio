@@ -21,7 +21,7 @@ import { TimeLine } from "./import/TimeLine";
  * @import BackgroundAnimate
  */
 import { BackgroundAnimate } from "./import/BackgroundAnimate";
-new BackgroundAnimate(".bg");
+new BackgroundAnimate("bgAnime", 3.5);
 
 
 /**
@@ -40,10 +40,18 @@ new Navigation();
 
 /**
  * @import Carousel
-
  import { Carousel } from "./import/Carousel";
  new Carousel;
  */
+
+
+/**
+ * @import CalcHeightHeader
+ *
+ */
+ import { CalcHeightHeader } from "./import/CalcHeightHeader";
+ new CalcHeightHeader;
+
 
 
 

@@ -3,7 +3,6 @@ export class Carousel {
         window.addEventListener("load", (e: Event) => {
             this.dimension();
         });
-
     }
 
     public dimension () {
