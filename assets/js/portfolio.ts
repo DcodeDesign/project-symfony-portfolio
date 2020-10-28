@@ -14,7 +14,7 @@ new PageLoader();
  * @import TimeLine
  */
 import { TimeLine } from "./import/TimeLine";
-//new TimeLine(".timeline ul li");
+new TimeLine(".timeline ul li");
 
 
 /**
