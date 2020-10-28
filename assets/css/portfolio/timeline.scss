@@ -119,14 +119,14 @@
 }
 
 .timeline ul li:nth-child(odd) div .effect  {
-  transform: scale(0);
   position: relative;
+  margin-top:400px;
 
 }
 
 .timeline ul li:nth-child(even) div .effect {
-  transform: scale(0);
   position: relative;
+  margin-top:400px;
 }
 
 .timeline ul li div .effect{
@@ -138,7 +138,7 @@
 }
 
 .timeline ul li.in-view div .effect {
-  transform:  scale(1);
   visibility: visible;
   opacity: 1;
+  margin-top:0;
 }

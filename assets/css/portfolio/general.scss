@@ -12,6 +12,7 @@ body {
   background-size: 100%;
   background: rgb(0, 0, 0) url("/assets/images/body/background-body-02.png") repeat local;
   font-family: "DIN-Alternate-Bold", sans-serif;
+  transition: background-position 1.5s ease-in-out;
 }
 
 .btn {
@@ -229,4 +230,8 @@ setInterval(anim, 6000); // 60 FPS.
 
 .text-center {
   text-align:center;
+}
+
+.color-green {
+  color:$green;
 }

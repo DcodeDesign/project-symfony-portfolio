@@ -1,56 +1,28 @@
-/**
- * portfolio.scss
- */
 import '../css/portfolio.scss';
-
-/**
- * @import PageLoader
- */
-import { PageLoader } from "./import/PageLoader";
-new PageLoader();
-
-
-/**
- * @import TimeLine
- */
-import { TimeLine } from "./import/TimeLine";
-new TimeLine(".timeline ul li");
-
-
-/**
- * @import BackgroundAnimate
- */
 import { BackgroundAnimate } from "./import/BackgroundAnimate";
-new BackgroundAnimate("bgAnime", 3.5);
-
-
-/**
- * @import Parallax
- */
+import { PageLoader } from "./import/PageLoader";
+import { TimeLine } from "./import/TimeLine";
 import { Parallax } from "./import/Parallax";
-new Parallax("parallax_header");
-
-
-/**
- * @import Navigation
- */
 import { Navigation } from "./import/Navigation";
-new Navigation();
+import { CalcHeightHeader } from "./import/CalcHeightHeader";
+import { Carousel } from "./import/Carousel";
 
-
+new PageLoader();
+new CalcHeightHeader();
+window.addEventListener("load", (e: Event) => {
+ new Parallax("parallax_header");
+ new BackgroundAnimate("bgAnime", 1.5);
+ new TimeLine(".timeline ul li");
+ new Navigation();
+ new Carousel;
+});
 /**
  * @import Carousel
- import { Carousel } from "./import/Carousel";
- new Carousel;
+
+
  */
 
 
-/**
- * @import CalcHeightHeader
- *
- */
- import { CalcHeightHeader } from "./import/CalcHeightHeader";
- new CalcHeightHeader;
 
 
 

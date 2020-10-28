@@ -1,3 +1,32 @@
+.col-1 {
+  width: 100%;
+  float: left;
+}
+.col-2 {
+  width: 50%;
+  float: left;
+}
+
+.row {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  .col-2, .col-1 {
+    display: inline-block;
+
+    h1.titre, h2.titre, h3.titre {
+      font-size: 34px;
+      color: $green;
+    }
+
+    .text {
+      font-size: 16px;
+      color: white;
+    }
+  }
+}
+
 section.skills {
   height: 1200px;
   width: 100%;
@@ -9,7 +38,7 @@ section.skills {
 
   .skills_content {
     width: 100%;
-    max-width:800px;
+    max-width:950px;
     margin: 300px auto 0;
 
     .col-2 {

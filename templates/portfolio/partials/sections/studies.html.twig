@@ -1,37 +1,204 @@
 <section class="etudes">
-    <ul class="timeLineH">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <h1 class="color-green text-center"> Etudes & Formations</h1>
+    <div class="container-timeLineH" >
+        <ul id="slider-nav" class="timeLineH">
+            <li >
+                <button class="date-time active" >2020</button>
+            </li>
+            <li >
+                <button class="date-time">2019</button>
+            </li>
+            <li >
+                <button class="date-time">2017</button>
+            </li>
+            <li >
+                <button class="date-time">2011</button>
+            </li>
+            <li >
+                <button class="date-time">2010</button>
+            </li>
+        </ul>
+    </div>
+    <div id="slider-content" class="slider">
+        <div class="slide show">
+
+            <p>IEPSCF Namur Cadets, Namur</p>
+            <h1>Bachelier : 2ème année en Informatique de gestion</h1>
+            <p>J’ai réussie les cours de initiation aux bases de données , gestion et exploitation de bases de données (SQL), techniques de gestion de projet, principes algorithmiques et programmation(JAVA, C), web principes de base(Html, css, bootstrap), structure des ordinateurs, principes d'analyse informatique (UML)</p>
+            <br>
+            <p>Cefora/Cevora, lieu — formation </p>
+            <h1>formation : Communication et relations humaines dans la gestion de projet </h1>
+
+
+        </div>
+        <div class="slide">
+            <p>
+                Bachelier : 1ère année en Informatique de gestion <br>
+                IEPSCF Namur Cadets, Namur
+            </p>
+            <p>
+                formation : Scrum Master <br>
+                Pyxis, Our
+            </p>
+        </div>
+        <div class="slide">
+            <p>
+                formation : Marketing digital <br>
+                Atelier Digital Google, libramont
+            </p>
+        </div>
+        <div class="slide">
+            <p>
+                formation : Gestionnaire en communication Multimédia <br>
+                CFPME, Dinant
+                2010 - 2011
+            </p>
+        </div>
+        <div class="slide">
+            <p>
+                formation : Infographie <br>
+                CFPME, Dinant
+                2008 – 2010
+            </p>
+        </div>
+        <div class="slide">
+            <p>
+                formation : Photographie Numérique / Argentique<br>
+                ILFOP, Namur
+                2008 – 2010 <br>
+
+            </p>
+        </div>
+    </div>
 </section>
 <style>
     section.etudes{
+        -webkit-box-shadow: 0px -14px 20px 17px #111111;;
+        -moz-box-shadow: 0px -14px 20px 17px #111111;;
+        box-shadow: 0px -14px 20px 17px #111111;;
         box-sizing: content-box;
         padding: 15px;
+        background-color: #111111;
+    }
+
+    .container-timeLineH {
+        margin:20px 0 0 20px ;
+        padding: 30px;
+        overflow: auto
     }
 
     ul.timeLineH {
+        padding: 0;
+        box-sizing: border-box;
         list-style-type: none;
+        max-width:800px;
         width: 100%;
         height: 2px;
         background-color: white;
+        margin:0 auto;
 
     }
 
-    ul.timeLineH li::after {
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        display: inline-block;
+    ul.timeLineH:before, ul.timeLineH:after {
+        position:relative;
         content: "";
+        height: 20px;
+        width: 20px;
+        background-color: white;
         float: left;
-        margin: 15px;
-        margin-top: -10px;
         border-radius: 50%;
-        box-sizing: border-box;
+        margin-top: -9px;
+        left:100%;
     }
+
+    ul.timeLineH:after {
+        margin-top: -9px;
+        left: -100%;
+        position: relative;
+        float: right;
+    }
+
+    @media screen and (max-width: 880px) {
+        ul.timeLineH:after {
+            margin-top: -9px;
+            left: -100%;
+        }
+    }
+
+    ul.timeLineH li button {
+        color:white;
+        font-weight: bold;
+        float: left;
+        position: relative;
+        outline: none;
+        border:2px solid white;
+        height: 46px;
+        background-color: #111111;
+        display: inline;
+        float: left;
+        margin: 15px 0 0 11%;
+        margin-top: -21px;
+        border-radius: 30px;
+        box-sizing: border-box;
+        transition: all 0.6s ease-in-out;
+    }
+
+    ul.timeLineH li button:hover {
+        border:2px solid #39FF64;
+        color:#39FF64;
+    }
+
+    ul.timeLineH li button:focus, ul.timeLineH li button.active{
+        background-color: #39FF64;
+        border:2px solid #39FF64;
+        color:#111111;
+    }
+
+    .slider {
+        position: relative;
+        max-width:800px;
+        width:100%;
+        min-height:300px;
+        margin: 0 auto;
+    }
+
+    .slider .slide {
+        opacity:0;
+        color:white;
+        position:absolute;
+        display:inline-block;
+        transition: all 0.6s ease-in-out;
+        margin: 0 auto;
+        left:-150px;
+    }
+
+    .slider .slide.show {
+        opacity:1;
+        color:white;
+        position:relative;
+        margin: 0 auto;
+        left: 0;
+    }
+
 </style>
+
+<script>
+    let sliderNav = document.getElementById('slider-nav');
+    let datetimes = sliderNav.getElementsByClassName('date-time');
+    let sliderContent = document.getElementById('slider-content');
+    let slides = sliderContent.getElementsByClassName('slide');
+
+    for (let i = 0; i < datetimes.length; i++) {
+        datetimes[i].addEventListener('click', (e) => {
+            let btnActive = sliderNav.getElementsByClassName('active');
+            btnActive[0].classList.remove('active');
+            e.target.classList.add('active');
+            console.log(e.currentTarget);
+
+            let slidesShow = sliderContent.getElementsByClassName('show');
+            slidesShow[0].classList.remove('show');
+            slides[i].classList.add('show');
+        });
+    }
+
+</script>

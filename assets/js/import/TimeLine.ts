@@ -4,7 +4,6 @@ export class TimeLine {
 
     constructor(elem : string) {
         this._elem = elem;
-        window.addEventListener("load", (e: Event) => {
             console.log('timeline effect');
             let items: any = document.querySelectorAll(this._elem);
             window.addEventListener("resize", (e: Event) => {
@@ -13,7 +12,6 @@ export class TimeLine {
             window.addEventListener("scroll", (e: Event) => {
                 this.elemVisible(items);
             });
-        });
     }
 
     private elemInScreen (rect: any) : boolean  {

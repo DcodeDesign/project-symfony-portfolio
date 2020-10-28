@@ -1,0 +1,109 @@
+<section id="contact" class="contact">
+    <div class="row contact-content">
+        <h1>Contact</h1>
+        <div class="col-2">
+            <h3>Coordonnées</h3>
+            <p><span class="color-green">Province :</span> 5000 Namur</p>
+            <p><span class="color-green">Mail :</span> gravythomas@gmail.com</p>
+            <p><span class="color-green">GSM :</span> 0474393739</p>
+            <div>
+                <button> Télécharger mon CV</button>
+                <a href="">Linkedin</a>
+                <a href="">Behance</a>
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="contact-form">
+                {{ form_start(contactForm) }}
+                {{ form_widget(contactForm.nom, {'attr': {'class': 'sujet-field', 'placeholder': 'Votre Nom'}}) }}
+                {{ form_widget(contactForm.email, {'attr': {'class': 'mail-field', 'placeholder': "Votre Email"}}) }}
+                {{ form_widget(contactForm.message, {'attr': {'class': 'message-field', 'placeholder': "Votre message"}}) }}
+                {{ form_end(contactForm) }}
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .contact {
+        border-top: 20px solid #39FF64;
+        border-bottom: 20px solid #39FF64;
+        background-color: #1B231A;
+    }
+
+    .contact-content {
+        max-width: 800px;
+        margin:0 auto;
+    }
+
+    .contact-form {
+        box-sizing: border-box;
+        width: 350px;
+        margin:20px;
+        margin-top:0;
+    }
+
+    .sujet-field, .mail-field, .message-field {
+        color: white;
+        height: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        border: 2px solid #39FF64;
+        padding: 10px;
+        background-color: #040404;
+    }
+
+    .sujet-field, .mail-field {
+        height: 50px;
+        -webkit-border-top-left-radius: 20px;
+        -webkit-border-top-right-radius: 20px;
+        -moz-border-radius-topleft: 20px;
+        -moz-border-radius-topright: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .mail-field {
+        border-top:0;
+        border-bottom:0;
+        border-radius: 0;
+    }
+
+    .message-field {
+        height: 200px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
+        border: 4px solid #39FF64;
+        background-color: #39FF64;
+        -webkit-border-bottom-right-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+        -moz-border-radius-bottomright: 20px;
+        -moz-border-radius-bottomleft: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-top: -5px;
+    }
+
+    .sujet-field::placeholder,
+    .mail-field::placeholder,
+    .message-field::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #00AF26;
+        opacity: 1; /* Firefox */
+    }
+
+    .sujet-field:-ms-input-placeholde,
+    .mail-field:-ms-input-placeholde,
+    .message-field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #00AF26;
+    }
+
+    .sujet-field::-ms-input-placeholder ,
+    .mail-field::-ms-input-placeholder ,
+    .message-field::-ms-input-placeholder { /* Microsoft Edge */
+        color: #00AF26;
+    }
+
+</style>
