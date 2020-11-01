@@ -20,22 +20,8 @@ export class TimeLine {
     }
 
     private elemInScreen(rect: any, items: any): boolean {
-
-       if ((rect - items.offsetHeight) <= (window.scrollY - (screen.height / 2))){
-
-          /* setTimeout(() => {
-               document.body.style.height = '100%';
-               document.body.style.overflow = 'hidden';
-           }, 1000)
-           setTimeout(() => {
-               document.body.style.height = 'auto';
-               document.body.style.overflow = 'auto';
-           }, 1)*/
-
-           return ((rect - items.offsetHeight) <= (window.scrollY - (screen.height / 2)));
-        }
-
-
+        // return ((rect - items.offsetHeight) <= (window.scrollY - (screen.height / 2)));
+        return ((rect) <= (window.scrollY + (screen.height)));
     }
 
     public elemVisible(array: any, items: HTMLCollection): void {

@@ -26,12 +26,12 @@ button, input, textarea {
 @keyframes gradient {
   0% {
     background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 0%, rgba(4,4,4,1) 0%, rgba(4,4,4,1) 100%);
-    color: #ffffff;
+    color: rgba(57,255,100,1);
   }
 
   10% {
     background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 10%, rgba(4,4,4,1) 10%, rgba(4,4,4,1) 100%);
-    color: #ffffff;
+    color: rgba(57,255,100,1);
   }
 
   20% {
@@ -41,7 +41,7 @@ button, input, textarea {
 
   30% {
     background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 30%, rgba(4,4,4,1) 30%, rgba(4,4,4,1) 100%);
-    color: #ffffff;
+    color: rgba(57,255,100,1);
   }
 
   40% {

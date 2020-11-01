@@ -8,14 +8,14 @@
                 <p class="gsm"><span class="color-green">GSM :</span> 0474393739</p>
                 <p class="gsm-resp btn" ><a href="tel:0474393739" >GSM : 0474393739</a></p>
                 <br>
-                <button class="btn">CV</button>
-                <a class="btn" href="">LINKEDIN</a>
-                <a class="btn" href="">BEHANCE</a>
+                <a class="btn" target="_blank" href="https://dcode.design/CV-THOMAS_GRAVY-2020.pdf">MON CV</a>
+                <a class="btn" target="_blank" href="https://www.linkedin.com/in/thomasgravy/">LINKEDIN</a>
+                <a class="btn" target="_blank" href="https://www.behance.net/gravythomas" >BEHANCE</a>
             </div>
         </div>
         <div class="col-2">
             <div class="contact-form">
-                {{ form_start(contactForm) }}
+                {{ form_start(contactForm, {'attr': {'id': 'contactForm'}}) }}
                 {{ form_widget(contactForm.nom, {'attr': {'class': 'sujet-field', 'placeholder': 'Sujet...'}}) }}
                 {{ form_widget(contactForm.email, {'attr': {'class': 'mail-field', 'placeholder': "Votre Email..."}}) }}
                 {{ form_widget(contactForm.message, {'attr': {'class': 'message-field', 'placeholder': "Votre message..."}}) }}

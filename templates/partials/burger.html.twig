@@ -3,3 +3,65 @@
     <div class="bar-middle"></div>
     <div class="bar-bottom"></div>
 </div>
+
+<div class="nav" >
+    <ul>
+        <li><button data-scrolling="timeLine" class="btnScrolling btn btn-green">Mon Parcours</button></li>
+        <li><button data-scrolling="skills" class="btnScrolling btn btn-green">Mes compétences</button></li>
+        <li><button data-scrolling="studies" class="btnScrolling btn btn-green">Mes études</button></li>
+        <li><button data-scrolling="contact" class="btnScrolling btn btn-green">Me contacter</button></li>
+    </ul>
+</div>
+
+<style>
+
+    .nav{
+        transition: all 0.5s ease-in-out;
+        position: fixed;
+
+        top: 90px;
+        z-index: 9999;
+        right: -230px;
+        width: 200px;
+        opacity: 1;
+
+    }
+
+    .nav.show {
+        top: 90px;
+        z-index: 9999;
+        right: -30px;
+        width: 200px;
+        opacity: 1;
+
+    }
+
+    .nav ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+    }
+
+    .nav ul li .btn.btn-green{
+        font-size: 16px;
+        padding: 14px;
+        width: 100%;
+        border-radius: 30px;
+        text-align: left;
+        margin: 0 0 10px 0;
+        background-color:#010101;
+        color:#38ff64;
+    }
+
+    .nav ul li .btn.btn-green:hover,
+    .nav ul li .btn.btn-green:focus {
+        font-size: 16px;
+        padding: 14px;
+        width: 100%;
+        border-radius: 30px;
+        text-align: left;
+        margin: 0 0 10px 0;
+        background-color:#38ff64 ;
+        color:#010101 ;
+    }
+</style>

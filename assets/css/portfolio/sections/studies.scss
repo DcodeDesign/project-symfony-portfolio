@@ -222,11 +222,7 @@ section.etudes {
         transition: all 0.6s ease-in-out;
       }
 
-      button:hover {
-        border: 2px solid #39FF64;
-        color: #39FF64;
-      }
-
+      button:hover,
       button:focus,
       button.active {
         background-color: #39FF64;
@@ -291,8 +287,6 @@ section.etudes {
         position: relative;
         margin: 0 auto;
         left: 0;
-        margin-top: 50%;
-        transform: translateY(-50%);
       }
     }
   }

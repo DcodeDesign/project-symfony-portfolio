@@ -1,15 +1,19 @@
 export class CalcHeightHeader {
     constructor() {
-        this.init();
+        window.addEventListener('scroll', () => {
+            setTimeout(() => {
+                this.calcMarginTop();
+            }, 1500)
+        })
+        this.calcMarginTopOnResize();
     }
 
-    public calcMarginTop () : void {
+    public calcMarginTop(): void {
         let callToAction : HTMLElement = document.getElementById("callToAction");
-            // callToAction.style.marginTop = (this.calcHeight() + 800) + "px";
-            callToAction.style.marginTop = (this.calcHeight()) + "px";
+        callToAction.style.marginTop = (this.calcHeight()) + "px";
     }
 
-    private calcHeight () : number {
+    private calcHeight(): number {
         let Timeline: HTMLElement = document.getElementById("timeLine");
         let header : HTMLElement = document.getElementById("header");
         let TimelineHeight: number = Timeline.offsetHeight;
@@ -26,16 +30,9 @@ export class CalcHeightHeader {
         return result;
     }
 
-    private calcMarginTopOnResize () : any {
+    private calcMarginTopOnResize (): any {
         window.addEventListener("resize", () => {
             this.calcMarginTop();
-        });
-    }
-
-    public init () : any {
-        window.addEventListener("load", () => {
-            this.calcMarginTop();
-            this.calcMarginTopOnResize();
         });
     }
 }
