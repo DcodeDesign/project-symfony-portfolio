@@ -5,11 +5,23 @@
     //transition:background-position 400ms ease-out;
     position: absolute;
     top:0;
-    background-image:url("../images/header/tinified/tinified/header_plan04.png"), url("../images/header/tinified/tinified/header_plan03.png"), url("../images/header/tinified/tinified/header_plan02.png"), url("../images/header/tinified/tinified/header_plan01.png");
+    //background-image:url("./images/header/tinified/tinified/header_plan04.png"), url("../images/header/tinified/tinified/header_plan03.png"), url("../images/header/tinified/tinified/header_plan02.png"), url("../images/header/tinified/tinified/header_plan01.png");
+    background-image:url("../images/header/3.png"), url("../images/header/2.png"), url("../images/header/1.jpg");
     background-repeat: no-repeat;
     background-size:110%;
-    background-position:center center;
+    background-position:50% 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .header__container .header__content {
+    background-size: 170%;
+  }
+
+  .timeline {
+    top: 70%;
   }
 }

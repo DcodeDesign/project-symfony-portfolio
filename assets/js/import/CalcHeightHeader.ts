@@ -5,7 +5,8 @@ export class CalcHeightHeader {
 
     public calcMarginTop () : void {
         let callToAction : HTMLElement = document.getElementById("callToAction");
-        callToAction.style.marginTop = this.calcHeight() + "px";
+            // callToAction.style.marginTop = (this.calcHeight() + 800) + "px";
+            callToAction.style.marginTop = (this.calcHeight()) + "px";
     }
 
     private calcHeight () : number {

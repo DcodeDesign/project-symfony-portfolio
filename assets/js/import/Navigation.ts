@@ -1,8 +1,6 @@
 export class Navigation {
     constructor() {
-        window.addEventListener("load", () => {
-            this.show();
-        })
+        this.show();
     }
 
     public show ()  {

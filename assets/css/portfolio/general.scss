@@ -10,10 +10,86 @@ body {
   //background: url("/assets/images/body/background-body-02.png"), linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(40,40,40,1) 100%);
   //background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 58%, rgba(40,40,40,1) 100%);
   background-size: 100%;
-  background: rgb(0, 0, 0) url("/assets/images/body/background-body-02.png") repeat local;
-  font-family: "DIN-Alternate-Bold", sans-serif;
-  transition: background-position 1.5s ease-in-out;
+  //font-family: "DIN-Alternate-Bold", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: background-attachement 1.5s ease-in;
+  background: rgb(0, 0, 0) url("/assets/images/body/background-body-02.png") repeat scroll;
 }
+
+
+button, input, textarea {
+  outline:none;
+  color:#040404;
+}
+
+
+@keyframes gradient {
+  0% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 0%, rgba(4,4,4,1) 0%, rgba(4,4,4,1) 100%);
+    color: #ffffff;
+  }
+
+  10% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 10%, rgba(4,4,4,1) 10%, rgba(4,4,4,1) 100%);
+    color: #ffffff;
+  }
+
+  20% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 20%, rgba(4,4,4,1) 20%, rgba(4,4,4,1) 100%);
+
+  }
+
+  30% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 30%, rgba(4,4,4,1) 30%, rgba(4,4,4,1) 100%);
+    color: #ffffff;
+  }
+
+  40% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 40%, rgba(4,4,4,1) 40%, rgba(4,4,4,1) 100%);
+  }
+
+  50% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 50%, rgba(4,4,4,1) 50%, rgba(4,4,4,1) 100%);
+  }
+
+  60% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 60%, rgba(4,4,4,1) 60%, rgba(4,4,4,1) 100%);
+  }
+
+  70% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 70%, rgba(4,4,4,1) 70%, rgba(4,4,4,1) 100%);
+  }
+
+  80% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 80%, rgba(4,4,4,1) 80%, rgba(4,4,4,1) 100%);
+  }
+
+  90% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 90%, rgba(4,4,4,1) 90%, rgba(4,4,4,1) 100%);
+  }
+
+  100% {
+    background:linear-gradient(90deg, rgba(57,255,100,1) 0%, rgba(56,250,98,1) 100%, rgba(4,4,4,1) 100%, rgba(4,4,4,1) 100%);
+    color:#040404;
+  }
+}
+
+
+button:hover {
+  /* set time duration to your needs */
+  animation: gradient 500ms ease-in-out;
+  color:#040404;
+  box-shadow: none;
+}
+
+button:focus {
+  background: rgba(57,255,100,0.8)
+}
+
+button:active {
+  background: rgba(57,255,100,0.8)
+}
+
 
 .btn {
   padding: 20px;
@@ -44,189 +120,9 @@ body {
   }
 }
 
-@-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.fluid-img {
+  width:100%;
 }
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(-360deg);
-    -moz-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    -o-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
-
-.rotating {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
-}
-
-table, th, td {
-  border: 0px solid black;
-  border-collapse: collapse;
-  margin:0;
-  padding:0;
-  vertical-align:top;
-}
-th, td {
-  width:40px;
-  height:40px;
-}
-
-.rectangle_1, .rectangle_2, .rectangle_3,.rectangle_4 {
-  transform: perspective(500px) rotateX(90deg);
-  width:50px;
-  height:50px;
-  display:inline-block;
-}
-.no-animation{
-  animation-duration: initial ;
-  animation-delay: initial;
-  animation-name:none;
-  transform-origin: initial;
-}
-
-.rectangle_1 {
-  background-color:red;
-  //animation-iteration-count:infinite;
-  animation-duration: 1.5s ;
-  animation-delay: 0s;
-  animation-name:perpective;
-  transform-origin: top left;
-}
-
-.rectangle_2 {
-  background-color:red;
-  //animation-iteration-count:infinite;
-  animation-duration: 1.5s;
-  animation-delay: 1.5s;
-  animation-name:perpective_2;
-  transform-origin: top left;
-}
-
-.rectangle_3 {
-  background-color:red;
-  //animation-iteration-count:infinite;
-  animation-duration: 1.5s;
-  animation-delay: 3s;
-  animation-name:perpective_3;
-  float:left;
-}
-
-.rectangle_4 {
-  //animation-iteration-count:infinite;
-  background-color:red;
-  animation-duration: 1.5s;
-  animation-delay: 4.5s;
-  animation-name:perpective_4;
-  float:left;
-}
-
-@keyframes perpective {
-  0% {
-    transform: perspective(500px) rotateX(90deg);
-  }
-
-  50% {
-    transform: perspective(500px) rotateX(0deg);
-  }
-
-  100% {
-    transform-origin: bottom left;
-    transform: perspective(500px) rotateX(-90deg);
-  }
-
-}
-
-@keyframes perpective_2 {
-  0% {
-    transform: perspective(500px) rotateX(90deg);
-  }
-
-  50% {
-    transform: perspective(500px) rotateX(0deg);
-  }
-
-  100% {
-    transform-origin: bottom right;
-    transform: perspective(500px) rotateY(90deg);
-  }
-
-}
-
-@keyframes perpective_3 {
-  0% {
-    transform-origin: bottom left;
-    transform: perspective(500px) rotateY(-90deg);
-  }
-
-  50% {
-    transform: perspective(500px) rotateX(0deg);
-  }
-
-  100% {
-    transform-origin: top right;
-    transform: perspective(500px) rotateX(90deg);
-  }
-
-}
-
-@keyframes perpective_4 {
-  0% {
-    transform-origin: bottom left;
-    transform: perspective(500px) rotateX(-90deg);
-  }
-
-  50% {
-    transform: perspective(500px) rotateX(0deg);
-  }
-
-  100% {
-    transform-origin: top left;
-    transform: perspective(500px) rotateY(-90deg);
-  }
-}
-
-/*
-<table id="animate" border="0">
-	<tbody>
-		<tr>
-			<td><div class="rectangle_1"></div></td>
-			<td><div class="rectangle_4"></div></td>
-		</tr>
-		<tr>
-			<td><div class="rectangle_2"></div></td>
-			<td><div class="rectangle_3"></div></td>
-		</tr>
-	</tbody>
-</table>
-
-anim = function () {
-	document.getElementById("animate").getElementByClassName("rectangle_1").style.animationDuration = "0s";
-}
-
-setInterval(anim, 6000); // 60 FPS.
- */
 
 .text-center {
   text-align:center;

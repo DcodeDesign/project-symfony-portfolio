@@ -1,32 +1,46 @@
 export class TimeLine {
 
     private _elem: string;
+    private _rect: any = [];
 
-    constructor(elem : string) {
+    constructor(elem: string) {
         this._elem = elem;
-            console.log('timeline effect');
-            let items: any = document.querySelectorAll(this._elem);
-            window.addEventListener("resize", (e: Event) => {
-                this.elemVisible(items);
-            });
-            window.addEventListener("scroll", (e: Event) => {
-                this.elemVisible(items);
-            });
-    }
-
-    private elemInScreen (rect: any) : boolean  {
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            (rect.top + 200) <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    public elemVisible(items : any) : void {
+        let items: any = document.querySelectorAll(this._elem);
         for (let i: number = 0; i < items.length; i++) {
-            let rect : any = items[i].getBoundingClientRect();
-            if (this.elemInScreen(rect)) {
+            this._rect[i] = items[i].getBoundingClientRect().top;
+        }
+        window.addEventListener("resize", (e: Event) => {
+            this.elemVisible(this._rect, items);
+        });
+
+        window.addEventListener("scroll",  (e: Event) => {
+            console.log('ici');
+            this.elemVisible(this._rect, items);
+        });
+    }
+
+    private elemInScreen(rect: any, items: any): boolean {
+
+       if ((rect - items.offsetHeight) <= (window.scrollY - (screen.height / 2))){
+
+          /* setTimeout(() => {
+               document.body.style.height = '100%';
+               document.body.style.overflow = 'hidden';
+           }, 1000)
+           setTimeout(() => {
+               document.body.style.height = 'auto';
+               document.body.style.overflow = 'auto';
+           }, 1)*/
+
+           return ((rect - items.offsetHeight) <= (window.scrollY - (screen.height / 2)));
+        }
+
+
+    }
+
+    public elemVisible(array: any, items: HTMLCollection): void {
+        for (let i: number = 0; i < array.length; i++) {
+            if (this.elemInScreen(array[i], items[i])) {
                 items[i].classList.add("in-view");
             }
         }
