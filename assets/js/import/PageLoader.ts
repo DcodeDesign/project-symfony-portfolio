@@ -28,18 +28,32 @@ export class PageLoader{
         new CalcHeightHeader();
 
         let submitContact = document.getElementById("contactForm");
+        let submitNom = $("#contact_nom");
+        let submitEmail = $("#contact_email");
+        let submitmessage = $("#contact_message");
         submitContact.addEventListener('submit', (e) => {
             e.stopPropagation();
             e.preventDefault();
 
-            $.ajax({
-                type: "post",
-                url: "http://127.0.0.1:8000/",
-                data: $('contactForm').serialize(),
-                success: function(result){
-                   console.log("Send message");
-                }
-            });
+            let test = JSON.stringify($('#contactForm').serializeArray())
+            let testDecode = JSON.stringify(JSON.parse(test));
+            console.log(testDecode);
+            $.post(
+                '/contact',
+                {
+                    data : JSON.stringify( $('#contactForm').serializeArray() )
+                },
+                function(response){
+                    if(response.code === 200 && response.success){
+                        document.getElementById('sendMessage').classList.add('show');
+                        submitNom.val("");
+                        submitEmail.val("");
+                        submitmessage.val("");
+                    }
+                    else{
+                        document.getElementById('errorMessage').classList.add('show');
+                    }
+                }, "json");
 
         })
     }
