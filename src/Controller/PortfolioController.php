@@ -15,6 +15,7 @@ class PortfolioController extends AbstractController
     public function index(Request $request,\Swift_Mailer $mailer){
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
-        return $this->render('portfolio/index.html.twig',['contactForm' => $form->createView()]);
+        // return $this->render('portfolio/index.html.twig',['contactForm' => $form->createView()]);
+        return $this->render('porfolioV2/index.html.twig');
     }
 }

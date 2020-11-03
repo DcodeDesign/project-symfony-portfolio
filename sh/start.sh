@@ -1,3 +1,3 @@
 #! /bin/bash
-npm run build
+webpack --mode production
 symfony server:start

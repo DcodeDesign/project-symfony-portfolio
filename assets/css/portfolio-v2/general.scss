@@ -1,0 +1,42 @@
+html, body {
+  margin:0;
+  padding:0;
+  background-color: #000000;
+  scrollbar-width: none;
+  // overflow:hidden;
+}
+
+body {
+  width:100%;
+  background-image: url("../images/portfolioV2/bg.png");
+  background-size: 100%;
+  background-position:0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-position 1s ease-in-out;
+  height:20000px;
+}
+
+body.scrollEffect {
+  background-position:0 -30vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

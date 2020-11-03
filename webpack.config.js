@@ -1,6 +1,6 @@
 const path = require('path');
 
-let buildTypescript = {
+/*let buildTypescript = {
     entry: ['./assets/js/main.ts'],
     module: {
         rules: [
@@ -32,11 +32,11 @@ let buildTypescript = {
         filename: '[name]'.js,
         path: path.resolve(__dirname, 'public/assets/'),
     }
-};
+};*/
 
 let buildPortfolio = {
     mode:'production',
-    entry: ['./assets/js/portfolio.ts' ],
+    entry: ['./assets/js/portfolio-v2.ts' ],
     module: {
         rules: [
             {
@@ -77,4 +77,5 @@ let buildPortfolio = {
     }
 };
 
-module.exports = [buildTypescript, buildPortfolio];
+// module.exports = [buildTypescript, buildPortfolio];
+module.exports = [buildPortfolio];
