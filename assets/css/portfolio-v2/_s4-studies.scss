@@ -17,6 +17,29 @@ section.studies {
   box-sizing: border-box;
   transition: all 1s linear;
 
+  .title-studies {
+    width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    h1 {
+      color: #46FF7B;
+      margin: 0;
+      padding: 0;
+      font-family: 'i_pixel_uregular', 'sans-serif';
+      transform: skewY(-10deg);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    hr {
+      margin: 10px 0;
+      transform: skewY(-10deg);
+      border: 2px solid;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+
   &.scrollEffect {
     z-index: 999999;
     opacity: 1;
@@ -78,9 +101,7 @@ section.studies {
       width: 46px;
       background-color: #040404;
       display: inline;
-      float: left;
-      margin: 15px 0 0 11%;
-      margin-top: -21px;
+      margin: -21px 0 0 11%;
       border-radius: 30px;
       box-sizing: border-box;
       transition: all 0.6s ease-in-out;
@@ -98,7 +119,7 @@ section.studies {
       border: 2px solid #39FF64;
       color: #040404;
       height: 56px;
-      width:56px;
+      width: 56px;
     }
   }
 
@@ -131,12 +152,15 @@ section.studies {
         font-weight: bolder;
         font-style: normal;
         font-size: 26px;
+        color: white;
       }
 
       h2 {
         font-weight: normal;
         font-style: normal;
         font-size: 20px;
+        color: #38ff64;
+        margin: 10px 0 10px 0;
       }
 
       h3, p {
@@ -148,6 +172,14 @@ section.studies {
       p {
         font-weight: normal;
         font-style: normal;
+        text-align: justify;
+        color: #2f773f;
+        background-color: black;
+        padding: 10px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        border: 2px solid #2f773f;
+        border-radius: 3px;
       }
     }
 
@@ -233,9 +265,7 @@ section.studies {
         height: 46px;
         background-color: #040404;
         display: inline;
-        margin: 15px 0 0 11%;
-        margin-top: 30px;
-        margin-left: -22px;
+        margin: 30px 0 0 -22px;
         border-radius: 30px;
         box-sizing: border-box;
         transition: all 0.6s ease-in-out;
@@ -323,10 +353,10 @@ section.studies {
   }
 
   .case h1 {
-   color:white !important;
+    color: white !important;
   }
 
   .case p {
-    display:none;
+    display: none;
   }
 }

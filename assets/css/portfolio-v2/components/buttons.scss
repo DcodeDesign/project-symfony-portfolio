@@ -3,8 +3,8 @@ a:hover {
   animation: gradient 500ms ease-in-out;
   color:#040404;
   box-shadow: none;
+  outline: 0 solid white;
 }
-
 
 @keyframes gradient {
   0% {

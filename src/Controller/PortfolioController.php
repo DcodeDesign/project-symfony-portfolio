@@ -16,6 +16,6 @@ class PortfolioController extends AbstractController
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
         // return $this->render('portfolio/index.html.twig',['contactForm' => $form->createView()]);
-        return $this->render('porfolioV2/index.html.twig');
+        return $this->render('porfolioV2/index.html.twig',['contactForm' => $form->createView()]);
     }
 }

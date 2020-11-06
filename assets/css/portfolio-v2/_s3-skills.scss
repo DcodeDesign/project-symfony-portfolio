@@ -11,6 +11,28 @@
   text-align: center;
   box-sizing: border-box;
   transition: all 1s linear;
+
+  .title-skills {
+    width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    h1 {
+      color: #46FF7B;
+      margin: 0;
+      padding: 0;
+      font-family: 'i_pixel_uregular', 'sans-serif';
+      transform: skewY(-10deg);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    hr {
+      margin:10px 0;
+      border-color: #46FF7B;
+      transform: skewY(-10deg);
+      border: 2px solid;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
 }
 
 #skills.scrollEffect {
@@ -61,6 +83,9 @@
   color: #46FF7B;
   border-radius: 3px;
 }
+#skills .skills-nav a.skills-nav-btn {
+  font-family: 'edit_undo_line_brkregular';
+}
 
 #skills .skills-nav a.skills-nav-btn.left {
   left: 20px;
@@ -82,7 +107,7 @@
 #skills ul li .content-skills-text p {
   text-align: justify;
   background-color: transparent;
-  color: #FFF;
+  color: #48d267;
   padding: 50px 20px 20px 20px;
   margin: -25px 50px 0;
 }

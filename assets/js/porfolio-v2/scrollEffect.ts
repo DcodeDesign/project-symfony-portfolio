@@ -43,7 +43,6 @@ export class ScrollEffect {
         if (window.scrollY >= (450 * 8) && window.scrollY <= (600 * 8)) {
             this.scrollLoader.animate((400 * 8), (600 * 8));
             document.getElementById('intro').classList.add('hide');
-            document.getElementById('intro').classList.add('hide');
             document.getElementById('header').classList.remove('scrollEffectStart');
             document.getElementById('route-01').classList.add('scrollEffectStart');
             document.getElementById('route-02').classList.remove('scrollEffectStart');

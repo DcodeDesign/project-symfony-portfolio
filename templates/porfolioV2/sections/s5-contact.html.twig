@@ -1,0 +1,50 @@
+<section id="contact" class="contact">
+    <div class="content-contact">
+        <div class="col-1">
+            <div class="console">
+                <div class="console__top">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="console__middle">
+                    <h3>Coordonées</h3>
+                    <a class="typeText" href=""><img class="icon-map" src="icons/icon-map.svg" /> Rue Henri Lecocq, 5000 Namur</a>
+                    <button class="typeText" type="button"><img class="icon-mail" src="icons/icon-mail.svg" />gravythomas@gmail.com</button>
+                    <a class="typeText" href="tel:0474393739"><img class="icon-gsm" src="icons/icon-gsm.svg" /> 0474 39 37 39</a>
+                </div>
+                <div class="console__bottom"></div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div id="contact" class="contact">
+                <div class="row contact-content">
+                    <div class="contact-form">
+                        {{ form_start(contactForm, {'attr': {'id': 'contactForm'}}) }}
+                        {{ form_widget(contactForm.nom, {'attr': {'class': 'sujet-field', 'placeholder': 'Sujet...'}}) }}
+                        {{ form_widget(contactForm.email, {'attr': {'class': 'mail-field', 'placeholder': "Votre Email..."}}) }}
+                        {{ form_widget(contactForm.message, {'attr': {'class': 'message-field', 'placeholder': "Votre message..."}}) }}
+                        {{ form_end(contactForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <button type="button">Fermer</button>
+            <img class="img" src="images/img-contact.svg" alt="" />
+            <div class="console">
+                <div class="console__top">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="console__middle">
+                    <a class="btn" target="_blank" href="https://dcode.design/CV-THOMAS_GRAVY-2020.pdf">MON CV</a>
+                    <a class="btn" target="_blank" href="https://www.linkedin.com/in/thomasgravy/">LINKEDIN</a>
+                    <a class="btn" target="_blank" href="https://www.behance.net/gravythomas" >BEHANCE</a>
+                </div>
+                <div class="console__bottom"></div>
+            </div>
+        </div>
+    </div>
+</section>

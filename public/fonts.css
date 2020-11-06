@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'i_pixel_uregular';
+    src: url('/fonts/i-pixel-u_2-webfont.woff2') format('woff2'),
+    url('fonts/i-pixel-u_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'edit_undo_line_brkregular';
+    src: url('fonts/edunline-webfont.woff2') format('woff2'),
+    url('fonts/edunline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DIN-Alternate-Bold";
+    src: local("DIN Alternate Bold"), url("/assets/fonts/DINAlternate-Bold.woff") format("woff");
+}

@@ -1,6 +1,6 @@
 #header {
     position: fixed;
-    img {
+    img.firstImg {
         width: 120% !important;
         position: relative;
         top: 50%;
@@ -13,12 +13,32 @@
     #intro {
         font-family: sans-serif;
         color: #D29773;
-        width: 600px;
+        width: 800px;
         margin: 0 auto;
-        margin-top: 160px;
+        margin-top: 220px;
         text-align: center;
         transition: all 1s ease-in-out;
         opacity: 1;
+    }
+
+    #intro-title {
+        transition: all 1s ease-in-out;
+    }
+
+    #intro-title img{
+        width:100% !important;
+        max-width:600px;
+        position:relative !important;
+        left:50% !important;
+        top:50% !important;
+        transform: translate(-50%,28%) !important;
+        margin-top:initial !important;
+    }
+
+    #intro-title.hide {
+        opacity: 0;
+        height: 0;
+        margin-top:0;
     }
 
     #intro h1{
@@ -30,21 +50,22 @@
         position: relative;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 7%);
-        height: 83px;
+        transform: translate(-50%, 7%) skewY(-10deg);
+        text-shadow: 2px 2px 4px #000000;
     }
 
     #intro h2 {
         padding: 0;
         margin: 0;
-        margin-top: 0px;
-        font-size: 18px;
+        margin-top: 0;
         animation: animeIntroH2 2.5s ease-in-out;
         position: relative;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%) skewY(-10deg);
         font-size: 27px;
+        font-family: 'i_pixel_uregular', 'sans-serif';
+        text-shadow: 2px 2px 4px #000000;
     }
 
     #intro p {
@@ -62,12 +83,13 @@
     #intro hr {
         padding:0;
         margin:10px 0;
-        border-color:#D29773;
         animation: animeIntroHr 2.5s linear;
         position: relative;
         left:50%;
         top:50%;
-        transform:translate(-50%,50%);
+        transform:translate(-50%,50%) skewY(-10deg);
+        border: 2px solid #D29773;
+        text-shadow: 2px 2px 4px #000000;
     }
 
     @keyframes animeIntroHr {
@@ -143,19 +165,24 @@
 
     #titre-route00 {
         text-align: center;
-        width: 300px;
-        margin: 120px auto 0;
+        width: 400px;
+        margin: 70px auto 0;
         opacity: 0;
         transition: all 1s linear;
 
         h1 {
-            color: #291523;
+            color: #3d2b47;
             margin:0;
             padding:0;
+            font-family: 'i_pixel_uregular', 'sans-serif';
+            transform: skewY(-10deg);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         hr {
             margin:10px 0;
-            border-color: #291523;
+            transform: skewY(-10deg);
+            border: 2px solid #3d2b47;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
     }
     #titre-route00.show {

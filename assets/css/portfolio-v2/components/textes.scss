@@ -6,8 +6,24 @@ h1, h2, h3, p{
 
 h1{
   font-size:42px;
+  font-family: 'i_pixel_uregular', 'sans-serif';
+  text-transform: uppercase;
 }
 
+h2{
+  font-family: 'edit_undo_line_brkregular';
+}
+
+h3{
+  font-family: 'edit_undo_line_brkregular';
+}
+
+p {
+  font-family: monospace;
+  line-height: 1.4em;
+  margin-top: 11px;
+  font-weight: 100;
+}
 hr {
   border-color:#D29773;
 }
