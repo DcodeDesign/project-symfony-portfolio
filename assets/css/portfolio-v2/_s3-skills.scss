@@ -1,0 +1,115 @@
+#skills {
+  opacity: 0;
+  position: fixed;
+  background-color: black;
+  background-image: url("../images/portfolioV2/bg-skills.jpg");
+  background-position: center top;
+  background-size: cover;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 1s linear;
+}
+
+#skills.scrollEffect {
+  z-index: 999999;
+  opacity: 1;
+}
+
+#skills ul {
+  margin: 0;
+  paddin: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+#skills ul li {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  float: left;
+  left: -10%;
+  top: 50%;
+  transform: translate(-50%, -35%);
+  transition: opacity 0.5s ease-in-out, left 1s ease-in-out;
+}
+
+#skills ul li.active {
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  opacity: 1;
+}
+
+#skills ul li .content-skills-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#skills ul li .content-skills-text p,
+#skills ul li .content-skills-text h2,
+#skills .skills-nav a.skills-nav-btn {
+  border: 2px solid #46FF7B;
+  background-color: #0B0708;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #46FF7B;
+  border-radius: 3px;
+}
+
+#skills .skills-nav a.skills-nav-btn.left {
+  left: 20px;
+}
+
+#skills .skills-nav a.skills-nav-btn.right {
+  right: 20px;
+}
+
+#skills .skills-nav a.skills-nav-btn.hide {
+  opacity: 0;
+}
+
+#skills ul li .content-skills-text h2 {
+  z-index: 1;
+  position: relative;
+}
+
+#skills ul li .content-skills-text p {
+  text-align: justify;
+  background-color: transparent;
+  color: #FFF;
+  padding: 50px 20px 20px 20px;
+  margin: -25px 50px 0;
+}
+
+#skills ul li .content-skills-text img.fluid {
+  width: 100%;
+  padding: 50px 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+#skills .skills-nav {
+  position: absolute;
+  z-index: 9999;
+  top: 10%;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+}
+
+#skills .skills-nav a.skills-nav-btn:hover {
+  background-color: #46FF7B;
+  color: #040404;
+}
+
+#skills .skills-nav a.skills-nav-btn.left,
+#skills .skills-nav a.skills-nav-btn.right {
+  text-decoration: none;
+  position: absolute;
+  opacity: 1;
+}

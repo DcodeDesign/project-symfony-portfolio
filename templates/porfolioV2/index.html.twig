@@ -12,7 +12,12 @@
 {% block body %}
     {% include './partials/loader.html.twig' %}
     <div id="container-page" class="container-page">
+        <div id="loaderScroll" class="loaderScroll">
+            <div class="round"></div>
+        </div>
         {% include 'porfolioV2/sections/s1-header.html.twig' %}
         {% include 'porfolioV2/sections/s2-route.html.twig' %}
+        {% include 'porfolioV2/sections/s3-skill.html.twig' %}
+        {% include 'porfolioV2/sections/s4-studies.html.twig' %}
     </div>
 {% endblock %}

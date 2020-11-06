@@ -1,31 +1,25 @@
-/*
-import {ScrollEffect} from "./ScrollEffect";
-import {Navigation} from "./Navigation";
-import {Carousel} from "./Carousel";
-import {ScrollTo} from "./ScrollTo";
-import $ from 'jquery';
-import {CalcHeightHeader} from "./CalcHeightHeader";
-*/
+import {ScrollEffect} from "./scrollEffect";
+import {slider} from "./slider";
 
-import {ScrollEffect} from "../porfolio-v2/scrollEffect";
-
-export class PageLoader{
+export class PageLoader {
 
     constructor() {
-        window.addEventListener("DOMContentLoaded", () => {
+        //window.addEventListener("DOMContentLoaded", () => {
             window.addEventListener("load", () => {
                 this.loader();
             });
-          window.addEventListener("load", () => {
+            window.addEventListener("load", () => {
+                window.scroll(0, 0);
                 document.getElementById('loaderPage').classList.add("hidden");
                 document.getElementById('container-page').classList.add("show");
-          });
+            });
 
-        });
+        //});
     }
 
-    public loader () :void {
+    public loader(): void {
         new ScrollEffect();
+        new slider('skills')
     }
 }
 
