@@ -1,3 +1,11 @@
+section.contact.open {
+  z-index:99999999999;
+  opacity: 1;
+  .content-contact {
+    top: 50%;
+  }
+}
+
 section.contact {
   position: fixed;
   width: 100%;
@@ -6,7 +14,9 @@ section.contact {
   background-position: center top;
   background-repeat: no-repeat;
   background-color: rgba(0,0,0,0.8);
-  z-index:99999999999;
+  z-index:-1;
+  opacity: 0;
+  transition: opacity 0.5s linear;
 
   .icon-gsm {
     width: 13px;
@@ -66,11 +76,12 @@ section.contact {
     width: 100%;
     overflow: hidden;
     padding: 20px;
-    top: 50%;
+    top: -50%;
     left: 50%;
     position: relative;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
+    transition: top 1s linear ;
 
     .col-1, .col-2, .col-3 {
       width: 33.33%;

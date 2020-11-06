@@ -1,10 +1,14 @@
 import {ScrollEffect} from "./scrollEffect";
-import {slider} from "./slider";
+import {Slider} from "./Slider";
+import {Dialog} from "./Dialog";
+import {TimeLine} from "./TimeLine";
+import {ScrollTo} from "./ScrollTo";
+import {Navigation} from "./Navigation";
 
 export class PageLoader {
 
     constructor() {
-        //window.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("DOMContentLoaded", () => {
             window.addEventListener("load", () => {
                 this.loader();
             });
@@ -14,12 +18,16 @@ export class PageLoader {
                 document.getElementById('container-page').classList.add("show");
             });
 
-        //});
+        });
     }
 
     public loader(): void {
         new ScrollEffect();
-        new slider('skills')
+        new ScrollTo();
+        new Navigation();
+        new Slider('skills');
+        new TimeLine();
+        new Dialog();
     }
 }
 

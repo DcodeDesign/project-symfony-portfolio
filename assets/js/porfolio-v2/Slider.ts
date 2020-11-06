@@ -1,4 +1,4 @@
-export class slider {
+export class Slider {
     constructor(idElement : string) {
         let sliderSkills = document.getElementById(idElement);
         let sliderSkillsNav = sliderSkills.getElementsByClassName("skills-nav")[0];
@@ -23,7 +23,6 @@ export class slider {
 
         for (let i = 0; i < btnSkills.length; i++) {
             btnSkills[i].addEventListener('click', (e) => {
-                console.log(e);
                 e.preventDefault()
                 let sliderSkills = document.getElementById("skills");
                 let sliderSkillsActive = sliderSkills.getElementsByClassName("active")[0];
