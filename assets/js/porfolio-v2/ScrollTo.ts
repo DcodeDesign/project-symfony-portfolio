@@ -1,14 +1,6 @@
 export class ScrollTo {
-    constructor() {
-        let btnScrolling: HTMLCollection = document.getElementsByClassName('btnScrolling');
-        for (let i = 0;i < btnScrolling.length; i++ ){
-            let elemScrollTo = (btnScrolling[i] as HTMLElement).getAttribute('data-scrolling').valueOf();
-            let pos = Number(document.getElementById(elemScrollTo).offsetTop);
-            let time = Number(600);
-            (btnScrolling[i] as HTMLElement).addEventListener('click', () => {
-                this.scrollToSmoothly(pos, time)
-            });
-        }
+    constructor(pos: any, time: any) {
+        this.scrollToSmoothly(pos, time)
     }
 
     public scrollToSmoothly(pos: any, time: any){

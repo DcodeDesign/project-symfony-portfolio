@@ -5,14 +5,19 @@ export class Dialog {
 
     public anime(): void {
         let dialogContact = document.getElementById('contact');
-        let closeDialogContact = document.getElementById('closeDialog');
-        let openDialogContact = document.getElementById('openDialog');
-        closeDialogContact.addEventListener('click', () => {
-            dialogContact.classList.remove('open');
-        })
+        let closeDialogContact = document.getElementsByClassName('closeDialog');
+        let openDialogContact = document.getElementsByClassName('openDialog');
 
-        openDialogContact.addEventListener('click', () => {
-            dialogContact.classList.add('open');
-        })
+        for (let i = 0; i < closeDialogContact.length; i++) {
+            closeDialogContact[i].addEventListener('click', () => {
+                dialogContact.classList.remove('open');
+            })
+        }
+
+        for (let i = 0; i < openDialogContact.length; i++) {
+            openDialogContact[i].addEventListener('click', () => {
+                dialogContact.classList.add('open');
+            })
+        }
     }
 }
