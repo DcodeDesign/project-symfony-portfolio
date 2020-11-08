@@ -20,11 +20,11 @@
   height: 100vh;
 }
 
-.show {
+.container-page.show {
   transition: all 3s ease-in-out;
   opacity:1;
-  overflow: initial;
-  height: initial;
+  overflow: hidden;
+  height: 100vh;
 }
 
 svg.tea {

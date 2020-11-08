@@ -6,9 +6,13 @@
 
 <div class="nav" >
     <ul>
-        <li onclick="scrollToSmoothly(150, 600)" class="closeDialog"><button >Mon Parcours</button></li>
-        <li onclick="scrollToSmoothly((1450 * 8), 600)" class="closeDialog"><button >Mes compétences</button></li>
-        <li onclick="scrollToSmoothly((1650 * 8), 600)" class="closeDialog"><button >Mes études</button></li>
-        <li class="openDialog"><button >Me contacter</button></li>
+        <li onclick="window.scroll({top: 250, left: 0, behavior: 'smooth'});" class="closeMenu"><button >Mon Parcours</button></li>
+        <li onclick="window.scroll({top: (1450 * 8),left: 0,behavior: 'smooth'});" class="closeMenu"><button >Mes compétences</button></li>
+        <li onclick="window.scroll({top: (1650 * 10), left: 0, behavior: 'smooth'});" class="closeMenu"><button >Mes études</button></li>
+        <li class="openDialog closeMenu"><button >Me contacter</button></li>
     </ul>
 </div>
+
+
+
+

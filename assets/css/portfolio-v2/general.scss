@@ -3,6 +3,8 @@ html, body {
   padding: 0;
   background-color: #000000;
   scrollbar-width: none;
+  -webkit-overflow-scrolling : touch !important;
+  overflow: auto !important;
 }
 
 body {

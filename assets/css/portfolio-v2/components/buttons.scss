@@ -1,3 +1,8 @@
+button,
+a {
+  outline: 0 solid white;
+}
+
 button:hover,
 a:hover {
   animation: gradient 500ms ease-in-out;

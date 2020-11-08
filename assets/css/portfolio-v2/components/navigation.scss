@@ -1,13 +1,14 @@
 .nav {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
   position: fixed;
   top: 0;
-  right: -2550px;
+  right: -3500px;
   z-index: 9999999;
-  opacity: 0;
+  opacity: 1;
   width: 100%;
   height: 100vh;
   background-color: #2b2b2b;
+  transform: skew(50deg);
 }
 
 .nav.show {
@@ -15,6 +16,7 @@
   z-index: 999999999;
   opacity: 1;
   right: 0;
+  transform: skew(0deg);
 }
 
 .nav ul {
@@ -24,7 +26,7 @@
 }
 
 .nav hr {
-  margin:10px 0;
+  margin: 10px 0;
   transform: skewY(-10deg);
   border: 2px solid #3d2b47;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -35,7 +37,7 @@
   height: 25vh;
   overflow: hidden;
   text-align: center;
-  position:relative;
+  position: relative;
   transform: skewY(-10deg);
   // border-top:2px solid white;
   // border-bottom:2px solid white;
@@ -46,20 +48,20 @@
   height: 25vh;
   overflow: hidden;
   text-align: center;
-  position:relative;
+  position: relative;
   transform: skewY(-10deg);
   // border-bottom:2px solid white;
 }
 
 .nav ul li button,
 .nav ul li a {
-  opacity:0;
+  opacity: 0;
   font-size: 50px;
   border: none;
   background: none;
-  color:white;
-  position:relative;
-  top:50%;
+  color: white;
+  position: relative;
+  top: 50%;
   transform: translateY(-50%);
   animation: none;
   font-family: 'i_pixel_uregular', 'sans-serif';
@@ -67,18 +69,19 @@
 }
 
 .nav.show ul li {
+  background: rgba(43, 43, 43, 1);
+  transition: all 0.7s ease-in-out;
   animation: gradientMenu 0.5s 0.5s linear;
 }
 
 .nav.show ul li button,
 .nav.show ul li a {
-  opacity:1;
-  //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 1;
 }
 
 .nav.show ul li:hover,
 .nav.show ul li:hover {
-  background-color:white;
+  background-color: white;
   animation: gradientMenu 0.5s linear;
   transform: scale(1.5) skewY(-10deg);
 
@@ -87,7 +90,7 @@
 .nav.show ul li:hover button,
 .nav.show ul li:hover a {
   transition: all 0.7s linear;
-  color:rgba(43,43,43,1);
+  color: rgba(43, 43, 43, 1);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -96,6 +99,7 @@
 .nav ul li:nth-child(1) a {
   transition: all 0.5s 0.7s linear;
 }
+
 .nav.show ul li:nth-child(1) {
   animation: gradientMenu 0.5s 0.5s linear;
 }
@@ -104,73 +108,73 @@
 .nav ul li:nth-child(2) a {
   transition: all 0.5s 1s linear;
 }
+
 .nav.show ul li:nth-child(2) {
   animation: gradientMenu 0.5s 0.8s linear;
 }
 
 .nav ul li:nth-child(3) button,
-.nav ul li:nth-child(3) a{
+.nav ul li:nth-child(3) a {
   transition: all 0.5s 1.2s linear;
 }
+
 .nav.show ul li:nth-child(3) {
   animation: gradientMenu 0.5s 1s linear;
 }
 
 .nav ul li:nth-child(4) button,
-.nav ul li:nth-child(4) a{
+.nav ul li:nth-child(4) a {
   transition: all 0.5s 1.4s linear;
 }
+
 .nav.show ul li:nth-child(4) {
   animation: gradientMenu 0.5s 1.4s linear;
 }
 
 @keyframes gradientMenu {
-
   0% {
-    background:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(43,43,43,1) 0%, rgba(43,43,43,1) 100%);
-    color:   rgba(43,43,43,1);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 1) 100%);
+    color: rgba(43, 43, 43, 1);
   }
 
   10% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 10%,  rgba(43,43,43,1) 10%,  rgba(43,43,43,1) 100%);
-    color:   rgba(43,43,43,1);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(43, 43, 43, 1) 10%, rgba(43, 43, 43, 1) 100%);
+    color: rgba(43, 43, 43, 1);
   }
 
   20% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 20%,  rgba(43,43,43,1) 20%,  rgba(43,43,43,1) 100%);
-
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(43, 43, 43, 1) 20%, rgba(43, 43, 43, 1) 100%);
   }
 
   30% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 30%,  rgba(43,43,43,1) 30%,  rgba(43,43,43,1) 100%);
-    color:   rgba(43,43,43,1);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(43, 43, 43, 1) 30%, rgba(43, 43, 43, 1) 100%);
+    color: rgba(43, 43, 43, 1);
   }
 
   40% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 40%,  rgba(43,43,43,1) 40%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(43, 43, 43, 1) 40%, rgba(43, 43, 43, 1) 100%);
   }
 
   50% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 50%,  rgba(43,43,43,1) 50%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(43, 43, 43, 1) 50%, rgba(43, 43, 43, 1) 100%);
   }
 
   60% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 60%,  rgba(43,43,43,1) 60%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(43, 43, 43, 1) 60%, rgba(43, 43, 43, 1) 100%);
   }
 
   70% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 70%,  rgba(43,43,43,1) 70%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(43, 43, 43, 1) 70%, rgba(43, 43, 43, 1) 100%);
   }
 
   80% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 80%,  rgba(43,43,43,1) 80%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(43, 43, 43, 1) 80%, rgba(43, 43, 43, 1) 100%);
   }
 
   90% {
-    background:linear-gradient(90deg,  rgba(255,255,255,1) 0%,  rgba(255,255,255,1) 90%,  rgba(43,43,43,1) 90%,  rgba(43,43,43,1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(43, 43, 43, 1) 90%, rgba(43, 43, 43, 1) 100%);
+    border:2px solid rgba(43, 43, 43, 1);
   }
-
-
 }
 
 .burger {

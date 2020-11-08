@@ -23,7 +23,6 @@ export class PageLoader {
 
     public loader(): void {
         new ScrollEffect();
-        new ScrollTo();
         new Navigation();
         new Slider('skills');
         new TimeLine();
