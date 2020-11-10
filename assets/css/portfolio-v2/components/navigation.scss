@@ -191,6 +191,9 @@
   background-color: #38ff64;
   padding: 10px;
   border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.69);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.69);
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.69);
 
   .bar-top,
   .bar-middle,

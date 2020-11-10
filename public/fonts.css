@@ -15,6 +15,28 @@
 }
 
 @font-face {
-    font-family: "DIN-Alternate-Bold";
-    src: local("DIN Alternate Bold"), url("/assets/fonts/DINAlternate-Bold.woff") format("woff");
+    font-family: 'montserrat_alternatesregular';
+    src: url('fonts/montserratalternates-regular-webfont.woff2') format('woff2'),
+    url('fonts/montserratalternates-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat_alternatesXBd';
+    src: url('fonts/montserratalternates-extrabold-webfont.woff2') format('woff2'),
+    url('fonts/montserratalternates-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat_alternatessemibold';
+    src: url('fonts/montserratalternates-semibold-webfont.woff2') format('woff2'),
+    url('fonts/montserratalternates-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }

@@ -3,30 +3,33 @@
 #route-03,
 #route-04 {
   position: fixed;
+
   img {
-    width:70%;
+    width: 70%;
     transition: all 1s ease-in-out;
-    margin-top:3000px;
+    margin-top: 3000px;
     position: relative;
     top: 50%;
     left: 50%;
-    transform:translate(-10%, 40vh);
+    transform: translate(-10%, 40vh);
   }
 }
 
 #route-01 {
   position: fixed;
+
   #text-route-01 {
 
   }
+
   img {
-    width:70%;
+    width: 70%;
     transition: all 1s ease-in-out;
-    margin-top:3000px;
+    margin-top: 3000px;
     position: relative;
     top: 50%;
     left: 50%;
-    transform:translate(-10%, 40vh);
+    transform: translate(-10%, 40vh);
   }
 
   .text-route-01 {
@@ -34,24 +37,26 @@
     left: 50%;
     top: 50%;
     transform: translate(40%, -13vh);
-    max-width: 540px;
+    max-width: 480px;
     width: 100%;
   }
 }
 
 #route-02 {
   position: fixed;
+
   #text-route-01 {
 
   }
+
   img {
-    width:70%;
+    width: 70%;
     transition: all 1s ease-in-out;
-    margin-top:3000px;
+    margin-top: 3000px;
     position: relative;
     top: 50%;
     left: 50%;
-    transform:translate(-40%, 40vh);
+    transform: translate(-40%, 40vh);
   }
 
   .text-route-02 {
@@ -60,7 +65,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-80%, -5vh);;
-    max-width: 540px;
+    max-width: 480px;
     width: 100%;
   }
 }
@@ -70,9 +75,9 @@
   position: fixed;
 
   img {
-    width:70%;
+    width: 70%;
     transition: all 1s ease-in-out;
-    margin-top:3000px;
+    margin-top: 3000px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -85,20 +90,22 @@
     left: 50%;
     top: 50%;
     transform: translate(40%, 0vh);;
-    max-width: 540px;
+    max-width: 480px;
     width: 100%;
   }
 }
 
 #route-04 {
   position: fixed;
+
   #text-route-01 {
 
   }
+
   img {
-    width:70%;
+    width: 70%;
     transition: all 1s ease-in-out;
-    margin-top:3000px;
+    margin-top: 3000px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -111,26 +118,26 @@
     left: 50%;
     top: 50%;
     transform: translate(-56%, -3vh);
-    max-width: 540px;
+    max-width: 480px;
     width: 100%;
   }
 }
 
-#route-01.scrollEffectStart ,
-#route-02.scrollEffectStart ,
-#route-03.scrollEffectStart ,
+#route-01.scrollEffectStart,
+#route-02.scrollEffectStart,
+#route-03.scrollEffectStart,
 #route-04.scrollEffectStart {
   img {
-    margin-top:0;
+    margin-top: 0;
   }
 }
 
 
-#route-01.scrollEffectEnd ,
-#route-02.scrollEffectEnd ,
-#route-03.scrollEffectEnd ,
+#route-01.scrollEffectEnd,
+#route-02.scrollEffectEnd,
+#route-03.scrollEffectEnd,
 #route-04.scrollEffectEnd {
   img {
-    margin-top:-3000px;
+    margin-top: -3000px;
   }
 }

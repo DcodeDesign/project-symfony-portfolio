@@ -129,6 +129,7 @@ section.studies {
     width: 100%;
     min-height: 400px;
     margin: 0 auto;
+    text-align: left;
 
     .slide {
       opacity: 0;
@@ -151,8 +152,9 @@ section.studies {
       h1 {
         font-weight: bolder;
         font-style: normal;
-        font-size: 26px;
+        font-size: 22px;
         color: white;
+        font-family: 'montserrat_alternatessemibold', sans-serif;
       }
 
       h2 {
@@ -173,13 +175,12 @@ section.studies {
         font-weight: normal;
         font-style: normal;
         text-align: justify;
-        color: #2f773f;
-        background-color: black;
+        color: #4faf64;
+        background-color: rgba(0,0,0,0.8);
         padding: 10px;
         margin-top: 15px;
         margin-bottom: 30px;
-        border: 2px solid #2f773f;
-        border-radius: 3px;
+        border-radius: 8px;
       }
     }
 

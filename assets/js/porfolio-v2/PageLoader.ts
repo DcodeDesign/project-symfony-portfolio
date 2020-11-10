@@ -2,8 +2,9 @@ import {ScrollEffect} from "./scrollEffect";
 import {Slider} from "./Slider";
 import {Dialog} from "./Dialog";
 import {TimeLine} from "./TimeLine";
-import {ScrollTo} from "./ScrollTo";
 import {Navigation} from "./Navigation";
+import {Message} from "./Message";
+import {CopyText} from "./CopyText";
 
 export class PageLoader {
 
@@ -27,6 +28,8 @@ export class PageLoader {
         new Slider('skills');
         new TimeLine();
         new Dialog();
+        new Message();
+        new CopyText('textCopy', 'btnCopy');
     }
 }
 
